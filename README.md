@@ -94,4 +94,71 @@
   
   Output: Trained pipelines for all models
 
+## 7.Model Evaluation & Selection
 
+    Comparison Table Example:
+    
+      Model	Recall	ROC-AUC
+      Random Forest	0.7807	0.8452
+      Logistic Regression	0.7834	0.8417
+      XGBoost	0.7513	0.8367
+      Decision Tree	0.8075	0.8302
+      SVM	0.7807	0.8250
+      KNN	0.5374	0.8026
+    
+    Final Best 3 Models:
+    
+      Random Forest
+      
+      Logistic Regression
+      
+      XGBoost
+    
+    Decision Basis: Recall, ROC-AUC, interpretability, stability
+
+## 8.Feature Importance
+
+  Purpose: Identify key churn drivers
+  
+  ### Techniques:
+  
+  Random Forest → feature_importances_
+  
+  XGBoost → plot_importance(importance_type='gain')
+  
+  SHAP → per-sample contributions
+  
+  ### Top Features:
+  
+  Contract_Month-to-Month, tenure, MonthlyCharges, InternetService_Fiber optic, PaymentMethod_Electronic check
+
+
+## 9.SHAP Analysis
+
+  Purpose: Explain individual predictions for business stakeholders
+  
+  ### Techniques:
+  ```python
+  import shap
+  explainer = shap.TreeExplainer(rf_clf)
+  shap_values = explainer.shap_values(X_train_processed)
+  shap.summary_plot(shap_values[1], X_train_processed, feature_names=all_features)
+  ```
+  
+  Outcome: Visualized per-customer and aggregate contributions to churn probability
+
+## 9.Business Insights
+
+  Short-term contracts → high churn
+  
+  High monthly charges → higher churn risk
+  
+  Fiber optic internet → higher churn
+  
+  Electronic check payments → slightly higher churn
+  
+  ### Actionable Recommendations:
+  
+  Target retention campaigns to Month-to-Month fiber customers
+  
+  Offer discounts or loyalty programs for high-billing churn-prone segments
