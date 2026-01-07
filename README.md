@@ -96,25 +96,27 @@
 
 ## 7.Model Evaluation & Selection
 
-    Comparison Table Example:
+  ### Comparison Table Example:
     
-      Model	Recall	ROC-AUC
-      Random Forest	0.7807	0.8452
-      Logistic Regression	0.7834	0.8417
-      XGBoost	0.7513	0.8367
-      Decision Tree	0.8075	0.8302
-      SVM	0.7807	0.8250
-      KNN	0.5374	0.8026
+  | Model               | Recall | ROC-AUC |
+  |--------------------|--------|---------|
+  | Random Forest       | 0.7807 | 0.8452  |
+  | Logistic Regression | 0.7834 | 0.8417  |
+  | XGBoost             | 0.7513 | 0.8367  |
+  | Decision Tree       | 0.8075 | 0.8302  |
+  | SVM                 | 0.7807 | 0.8250  |
+  | KNN                 | 0.5374 | 0.8026  |
+
     
-    Final Best 3 Models:
-    
-      Random Forest
-      
-      Logistic Regression
-      
-      XGBoost
-    
-    Decision Basis: Recall, ROC-AUC, interpretability, stability
+  ### Final Best 3 Models:
+  
+  Random Forest
+  
+  Logistic Regression
+  
+  XGBoost
+  
+  Decision Basis: Recall, ROC-AUC, interpretability, stability
 
 ## 8.Feature Importance
 
