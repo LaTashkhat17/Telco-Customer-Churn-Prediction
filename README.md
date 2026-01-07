@@ -14,7 +14,7 @@
   
   ### Techniques:
   
-  'df.info()', 'df.describe()', 'df.isnull().sum()'
+  `df.info()`, `df.describe()`, `df.isnull().sum()`
   
   Univariate analysis: histogram, boxplot, countplot
   
@@ -50,13 +50,13 @@
   
   ### Techniques:
   
-  'train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)'
+  `train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)`
   
   stratify=y → preserves churn proportion
   
   random_state=42 → reproducible results
   
-  Output: 'X_train, X_test, y_train, y_test'
+  Output: `X_train, X_test, y_train, y_test`
 
 ## 5.Handling Class Imbalance
 
