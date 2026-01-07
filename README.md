@@ -164,3 +164,66 @@
   Target retention campaigns to Month-to-Month fiber customers
   
   Offer discounts or loyalty programs for high-billing churn-prone segments
+
+
+## 10.Business Insights
+
+Short-term contracts → high churn
+
+High monthly charges → higher churn risk
+
+Fiber optic internet → higher churn
+
+Electronic check payments → slightly higher churn
+
+Actionable Recommendations:
+
+Target retention campaigns to Month-to-Month fiber customers
+
+Offer discounts or loyalty programs for high-billing churn-prone segments
+
+## 11.Deployment / Production Notes
+
+Pipeline: Preprocessing + model wrapped in Pipeline
+
+Reproducibility: random_state + preprocessing saved with joblib
+
+Monitoring: Track recall & churn predictions in real-time
+
+    Workflow Diagram (Text Version)
+    Raw Data (Kaggle)
+           │
+           ▼
+    Exploratory Data Analysis (EDA)
+           │
+           ▼
+    Feature Engineering & Preprocessing
+      - Encode categorical
+      - Scale numeric
+      - Create new features
+           │
+           ▼
+    Train-Test Split (stratified)
+           │
+           ▼
+    Handle Class Imbalance
+      - class_weight='balanced'
+      - Optional: SMOTE if needed
+           │
+           ▼
+    Model Training
+      - LR, DT, RF, XGB, SVM, KNN
+           │
+           ▼
+    Model Evaluation
+      - Metrics: Recall, ROC-AUC
+      - Select best 3 models
+           │
+           ▼
+    Feature Importance & SHAP Analysis
+           │
+           ▼
+    Business Insights & Actionable Recommendations
+           │
+           ▼
+    Deployment / Production
